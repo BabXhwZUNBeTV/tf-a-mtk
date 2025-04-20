@@ -31,11 +31,11 @@ jobs:
               make $cfg
               make CROSS_COMPILE=aarch64-linux-gnu- bl2 -j16 || exit -1
               cp build/${TARGET_NAME}/release/bl2.bin ${OUT_DIR}/bl2-${BUILD_NAME}.bin
-              rm -rf build
+              
           done
 
       - name: Upload file
         uses: actions/upload-artifact@main
         with:
          name: binpackages
-         path: home/runner/work/tf-a-mtk/tf-a-mtk/build/
+         path: output
