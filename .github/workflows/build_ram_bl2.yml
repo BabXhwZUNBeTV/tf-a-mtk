@@ -33,7 +33,9 @@ jobs:
               cp build/${TARGET_NAME}/release/bl2.bin ${OUT_DIR}/bl2-${BUILD_NAME}.bin
               rm -rf build
           done
-      - name: Release
-        uses: softprops/action-gh-release@v1
+
+      - name: Upload file
+        uses: actions/upload-artifact@main
         with:
-          files: output/*.bin
+         name: binpackages
+         path: /home/runner/work/tf-a-mtk/tf-a-mtk/build/
