@@ -38,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@main
         with:
          name: binpackages
-         path: /home/runner/work/tf-a-mtk/tf-a-mtk/build/
+         path: home/runner/work/tf-a-mtk/tf-a-mtk/build/
