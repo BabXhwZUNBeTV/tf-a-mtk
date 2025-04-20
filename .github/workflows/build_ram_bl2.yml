@@ -1,6 +1,9 @@
 name: Build BL2 for UART recovery
 
+
 on:
+  repository_dispatch:
+  workflow_dispatch:
   push:
     tags:
       - "v*-mtk"
